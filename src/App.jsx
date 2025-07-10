@@ -6,6 +6,7 @@ import { About } from './pages/About';
 import { Contact } from './pages/Contact';
 import { Dashboard } from './pages/Dashboard';
 import { ErrorPage } from './pages/ErrorPage';
+import { getAPIData } from './api/ApiData';
 
 function App() {
 
@@ -48,7 +49,8 @@ function App() {
         },
         {
           path: "/dashboard",
-          element: <Dashboard />
+          element: <Dashboard />,
+          loader: getAPIData,
         }
       ]
     }
