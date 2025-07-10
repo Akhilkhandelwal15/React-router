@@ -1,0 +1,6 @@
+.active{
+    color: green;
+}
+.nav-link.active-link{
+    color: red;
+}

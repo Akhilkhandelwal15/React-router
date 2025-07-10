@@ -4,6 +4,8 @@ import { AppLayout } from './layout/AppLayout';
 import { Home } from './pages/Home';
 import { About } from './pages/About';
 import { Contact } from './pages/Contact';
+import { Dashboard } from './pages/Dashboard';
+import { ErrorPage } from './pages/ErrorPage';
 
 function App() {
 
@@ -30,6 +32,7 @@ function App() {
     {
       path: "/",
       element: <AppLayout />,
+      errorElement: <ErrorPage />,
       children: [
         {
           path: "/",
@@ -42,6 +45,10 @@ function App() {
         {
           path: "/contact",
           element: <Contact />
+        },
+        {
+          path: "/dashboard",
+          element: <Dashboard />
         }
       ]
     }
