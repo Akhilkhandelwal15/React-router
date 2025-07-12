@@ -6,7 +6,8 @@ import { About } from './pages/About';
 import { Contact } from './pages/Contact';
 import { Dashboard } from './pages/Dashboard';
 import { ErrorPage } from './pages/ErrorPage';
-import { getAPIData } from './api/ApiData';
+import { getAPIData, getMovieDetails } from './api/ApiData';
+import { UserDetail } from './pages/UserDetail';
 
 function App() {
 
@@ -51,6 +52,11 @@ function App() {
           path: "/dashboard",
           element: <Dashboard />,
           loader: getAPIData,
+        },
+        {
+          path: "/movie/:id",
+          element: <UserDetail />,
+          loader: getMovieDetails
         }
       ]
     }

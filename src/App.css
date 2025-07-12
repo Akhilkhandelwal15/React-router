@@ -1,6 +1,30 @@
+*{
+    /* margin: 0;
+    padding: 0; */
+    box-sizing: border-box;
+}
 .active{
     color: green;
 }
 .nav-link.active-link{
     color: red;
+}
+.grid-box{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+.grid-item{
+    width: 400px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.grid-item img{
+    height: 300px;
+    width: 300px;
+    padding: 20px;
 }
