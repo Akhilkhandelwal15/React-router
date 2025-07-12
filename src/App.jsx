@@ -3,7 +3,7 @@ import './App.css'
 import { AppLayout } from './layout/AppLayout';
 import { Home } from './pages/Home';
 import { About } from './pages/About';
-import { Contact } from './pages/Contact';
+import { Contact, handleContactFormData } from './pages/Contact';
 import { Dashboard } from './pages/Dashboard';
 import { ErrorPage } from './pages/ErrorPage';
 import { getAPIData, getMovieDetails } from './api/ApiData';
@@ -46,7 +46,8 @@ function App() {
         },
         {
           path: "/contact",
-          element: <Contact />
+          element: <Contact />,
+          action: handleContactFormData,
         },
         {
           path: "/dashboard",
